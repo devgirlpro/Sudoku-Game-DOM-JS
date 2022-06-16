@@ -38,7 +38,7 @@ hr{
 
 .tile, .number{
     box-sizing: border-box;
-    width: 3px;
+    width: 39px;
     height: 39px;
     border: 1px solid black;
 
