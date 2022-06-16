@@ -9,33 +9,27 @@ body {
 }
 
 .title{
-    /* display: inline-block; */
-    color: orangered;
-    font-size: 38px;
-    /* width: 150px;
-    border-bottom: 2px solid black;
-    padding: 10px 0; */
+    color: rgb(249, 68, 48);
+    font-size: 38px; 
 }
 
 hr{
-    width: 500px;
-   
+    width: 300px; 
+    border-bottom: 4px dashed salmon; 
 }
 
 
 #errors, h2 {
     color: orangered;
-    font-size: 28px;
+    font-size: 20px;
+    text-align: center;
 }
-/* .space{
-    width: 1000px;
-    height: 1000px;
-} */
+
 
 #sudoBoard {
     border: 4px solid salmon;
-    width: 450px;
-    height: 450px;
+    width: 351px;
+    height: 351px;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
@@ -44,9 +38,9 @@ hr{
 
 .tile, .number{
     box-sizing: border-box;
-    width: 50px;
-    height: 50px;
-    border: 1px solid gray;
+    width: 3px;
+    height: 39px;
+    border: 1px solid black;
 
     /* text */
     font-size: 20px;
@@ -56,8 +50,8 @@ hr{
     align-items: center;
 }
 .number {
-    width: 46px;
-    height: 46px;
+    width: 35px;
+    height: 35px;
     margin: 2px;
 }
 
@@ -70,7 +64,7 @@ hr{
 }
 
 #digits {
-  width: 450px;
+  width: 351px;
   height: 50px;
 
   /* background-color: rgba(246, 241, 233, 0.717); */
@@ -86,4 +80,82 @@ hr{
 
 .vertical-line {
     border-right: 3px solid black;
+}
+
+
+@media only screen and (min-width: 600px) {
+    hr{
+        width: 400px;   
+    }
+
+    .title{
+        font-size: 44px;
+    }
+
+    #errors, h2 {
+        color: orangered;
+        font-size: 30px;
+        text-align: center;
+    }
+
+    #sudoBoard {
+        width: 549px;
+        height: 549px;
+    }
+
+    .tile, .number{
+        box-sizing: border-box;
+        width: 61px;
+        height: 61px;    
+        /* text */
+        font-size: 24px;
+    }
+   
+    #digits {
+        width: 549px;
+        height: 60px;
+      }
+       .number {
+        width: 100px;
+    }
+
+}
+
+
+@media only screen and (min-width:1024px) {
+    hr{
+        width: 800px;   
+    }
+
+    .title{
+        font-size: 58px;
+    }
+
+    #errors, h2 {
+        color: orangered;
+        font-size: 40px;
+        text-align: center;
+    }
+
+    #sudoBoard {
+        width: 900px;
+        height: 900px;
+    }
+
+    .tile, .number{
+        box-sizing: border-box;
+        width: 100px;
+        height: 100px;    
+        /* text */
+        font-size: 32px;
+    }
+   
+    #digits {
+        width: 900px;
+        height: 60px;
+      }
+       .number {
+        width: 96px;
+    }
+
 }

@@ -37,17 +37,13 @@ window.onload = function() {
 function setGame() {
     //diigits 1-9
     for (let i = 1; i < 10 ; i++) {
-        let digits = document.getElementById("digits");
-        // console.log(digits)
+        //Digits 1 - 9
         let number = document.createElement("dive");
         number.id = i;
-
-        number.addEventListener("click", selectNumber);
-
         number.innerText = i;
         number.classList.add("number");
         document.getElementById("digits").appendChild(number);
-        //  console.log(number)    
+        number.addEventListener("click", selectNumber);    
     }
 
 
@@ -99,13 +95,13 @@ function setGame() {
 
 function selectNumber(){
     if (numSelected != null) {
-        console.log("numSelected in iF =>", numSelected)
+        // console.log("numSelected in iF =>", numSelected)
         numSelected.classList.remove("active");
     }
-    console.log("numSelected out iF =>", numSelected)
+    // console.log("numSelected out iF =>", numSelected)
     numSelected = this;
     numSelected.classList.add("active");
-    console.log("numSelected after iF =>", numSelected)
+    // console.log("numSelected after iF =>", numSelected)
 }
 
 
@@ -119,9 +115,9 @@ function selectTile() {
         }
 
     //remind th tileID => "0-0", "0-1".."0-2"
-    let coords = this.id.split("-"); //["0", "0"]
-    let r = parseInt(coords[0]);
-    let c = parseInt(coords[1]);
+    // let coords = this.id.split("-"); //["0", "0"]
+    // let r = parseInt(coords[0]);
+    // let c = parseInt(coords[1]);
 
     if (solution[r][c] == numSelected.id) {
         this.innerText = numSelected.id;
