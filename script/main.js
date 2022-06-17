@@ -115,12 +115,12 @@ function selectTile() {
         }
 
     //remind th tileID => "0-0", "0-1".."0-2"
-    // let coords = this.id.split("-"); //["0", "0"]
-    // let r = parseInt(coords[0]);
-    // let c = parseInt(coords[1]);
+    let coords = this.id.split("-"); //["0", "0"]
+    let r = parseInt(coords[0]);
+    let c = parseInt(coords[1]);
 
     if (solution[r][c] == numSelected.id) {
-        this.innerText = numSelected.id;
+        tileSelected.innerText = numSelected.id;
     }
     else {
         alert("I know i'm ANNOYING but you're wrong")
